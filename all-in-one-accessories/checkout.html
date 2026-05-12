@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+
+  <style>
+  /* ================= GLOBAL ================= */
+  body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420")
+    no-repeat center/cover;
+  }
+
+  /* ================= NAVBAR ================= */
+  .navbar {
+    margin: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+  }
+
+  /* ================= CONTAINER ================= */
+  .container {
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  /* ================= INPUT ================= */
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+    border: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  /* ================= LIST ================= */
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* ================= TOTAL ================= */
+  #total {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  /* ================= BUTTON ================= */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #00ffcc;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #00ccaa;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>💳 Checkout</h2>
+    <a href="index.html" style="color:white;">← Kembali</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <h2>Data Pembeli</h2>
+
+    <input type="text" id="nama" placeholder="Nama" class="input">
+    <input type="text" id="alamat" placeholder="Alamat" class="input">
+
+    <h2>Ringkasan Belanja</h2>
+    <div id="checkout-list"></div>
+
+    <h3 id="total"></h3>
+
+    <button onclick="checkout()" class="btn">Bayar Sekarang</button>
+
+  </div>
+
+  <script src="assets/js/checkout.js"></script>
+
+  <!-- ANIMASI HALUS -->
+  <script>
+  document.body.style.opacity = 0;
+  setTimeout(() => {
+    document.body.style.transition = "0.5s";
+    document.body.style.opacity = 1;
+  }, 100);
+  </script>
+
+</body>
+</html>

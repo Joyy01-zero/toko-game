@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+
+  <style>
+  /* ================= GLOBAL ================= */
+  body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* sama kayak index */
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420")
+    no-repeat center/cover;
+  }
+
+  /* ================= BOX LOGIN ================= */
+  .login-box {
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+
+    border-radius: 20px;
+
+    /* GLASS EFFECT */
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  }
+
+  .login-box h1 {
+    margin-bottom: 20px;
+  }
+
+  /* ================= INPUT ================= */
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+    border: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  /* ================= BUTTON ================= */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #00ffcc;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #00ccaa;
+  }
+
+  /* LINK */
+  .link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .link a {
+    color: #00ffcc;
+    text-decoration: none;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h1>🎮 Login</h1>
+
+    <input type="text" id="username" placeholder="Username" class="input">
+    <input type="password" id="password" placeholder="Password" class="input">
+
+    <button onclick="login()" class="btn">Login</button>
+
+    <div class="link">
+      Belum punya akun? <a href="register.html">Daftar</a>
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+
+</body>
+</html>  
