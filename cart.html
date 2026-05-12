@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+
+  <style>
+  /* ================= GLOBAL ================= */
+  body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+
+    background: url("assets/images/jahanzeb-ahsan-7gSgXv-MqGI-unsplash.jpg")
+    no-repeat center/cover;
+  }
+
+  /* ================= NAVBAR ================= */
+  .navbar {
+    margin: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+  }
+
+  /* ================= CONTAINER ================= */
+  .container {
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+  }
+
+  /* ================= ITEM ================= */
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* ================= TOTAL ================= */
+  #total {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  /* ================= BUTTON ================= */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #00ffcc;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #00ccaa;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>🛒 Keranjang</h2>
+    <a href="index.html" style="color:white;">← Kembali</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div id="cart-list"></div>
+
+    <h2 id="total"></h2>
+
+    <button onclick="goCheckout()" class="btn">Checkout</button>
+
+  </div>
+
+  <script src="assets/js/cart.js"></script>
+
+  <!-- JS TAMBAHAN -->
+  <script>
+  function goCheckout() {
+    window.location.href = "checkout.html";
+  }
+
+  document.body.style.opacity = 0;
+  setTimeout(() => {
+    document.body.style.transition = "0.5s";
+    document.body.style.opacity = 1;
+  }, 100);
+  </script>
+
+</body>
+</html>
